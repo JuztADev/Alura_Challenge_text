@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width initial-scale=1.0">
     <title>Alura Encriptador</title>
 </head>
 <body>
@@ -12,11 +12,11 @@
     <main>
         <div class="main-form">
             <form >
-                <textarea cols="30" rows="10" placeholder="Ingrese su texto aqui" onkeypress="onlyAllowText()"></textarea>
+                <textarea id="text" cols="30" rows="10" placeholder="Ingrese su texto aqui"></textarea>
                 <p>texto no debe contener caracteres especiales o mayusculas</p>
                 <div class="div-buttons">
-                    <button type="submit">Encriptar</button>
-                    <button type="submit">Desencriptar</button>
+                    <button id="encrypt" type="button" onclick="checkText(this.id)">Encriptar</button>
+                    <button id="decrypt" type="button" onclick="checkText(this.id)">Desencriptar</button>
                 </div>
             </form>
             <div class="display-action">
@@ -26,7 +26,8 @@
                     <p>ingrese el texto que desee encriptar o desencriptar</p>
                 </div>
                 <div class="txt-found">
-
+                    <textarea id="text-printed" cols="30" rows="10" disabled>textodeprueba456</textarea>
+                    <button type="button" onclick="copyText()">copy text</button>
                 </div>
                 
 
