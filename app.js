@@ -40,7 +40,7 @@ const regexDecrypt = /(enter|imes|ai|ober|ufat)/g;
 function checkText(buttonId){
     clearOutput();
     if(regexUpperCase.exec(textToValidate.value) || regexSpecialChar.exec(textToValidate.value)){
-        alert("Recuerde que el texto no solo debe incluir minusculas y sin acentos")
+        alert("Recuerde que el texto solo debe incluir minusculas y sin acentos")
         return;
     }
     console.log("pasa")
