@@ -40,8 +40,10 @@ const regexDecrypt = /(enter|imes|ai|ober|ufat)/g;
 function checkText(buttonId){
     clearOutput();
     if(regexUpperCase.exec(textToValidate.value) || regexSpecialChar.exec(textToValidate.value)){
+        alert("Recuerde que el texto no solo debe incluir minusculas y sin acentos")
         return;
     }
+    console.log("pasa")
     //Since the text is valid, check if the user wants to encrypt or decrypt it
     if(buttonId=="encrypt"){
         encryptText();
@@ -87,10 +89,17 @@ function removeDuplicates(array){
 //function to copy the encrypt/decrypt text
 function copyText(){
     navigator.clipboard.writeText(textToCopy.value);
+    document.querySelector(".copied").classList.remove("invisible");
+    setTimeout(()=>{
+        document.querySelector(".copied").classList.add("invisible");
+    },2000)
+
 }
 //function to print the encrypted/decrypted text
 function textPrinted(message){
-    document.querySelector("#text-printed").value = message
+    document.querySelector("#text-printed").value = message;
+    document.querySelector(".no-txt-found").classList.add("invisible")
+    document.querySelector(".txt-found").classList.add("visible")
 }
 // function to clear the text in input field
 function clearInput(){

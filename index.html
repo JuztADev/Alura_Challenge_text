@@ -3,31 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Alura Encriptador</title>
 </head>
 <body>
     <header>
-        <img src="" alt="">
+        <img src="images/Logo@2x.png" alt="alura">
     </header>
     <main>
         <div class="main-form">
             <form >
                 <textarea id="text" cols="30" rows="10" placeholder="Ingrese su texto aqui"></textarea>
-                <p>texto no debe contener caracteres especiales o mayusculas</p>
+                <div>
+                    <img src="images/bi_exclamation-circle-fill.png" alt="">
+                    <p>Solo letras minúsculas y sin acentos</p>
+                </div>
                 <div class="div-buttons">
-                    <button id="encrypt" type="button" onclick="checkText(this.id)">Encriptar</button>
-                    <button id="decrypt" type="button" onclick="checkText(this.id)">Desencriptar</button>
+                    <button id="encrypt" class="btn-default" type="button" onclick="checkText(this.id)">Encriptar</button>
+                    <button id="decrypt" class="btn-default" type="button" onclick="checkText(this.id)">Desencriptar</button>
                 </div>
             </form>
             <div class="display-action">
                 <div class="no-txt-found">
-                    <img src="" alt="texto no encontrado">
-                    <h2>Ningun mensaje fue encontrado</h2>
-                    <p>ingrese el texto que desee encriptar o desencriptar</p>
+                    <img src="images/Muñeco.png" alt="Muñeco">
+                    <h2>Ningún mensaje fue encontrado</h2>
+                    <p>Ingrese el texto que desee encriptar o desencriptar</p>
                 </div>
                 <div class="txt-found">
-                    <textarea id="text-printed" cols="30" rows="10" disabled>textodeprueba456</textarea>
-                    <button type="button" onclick="copyText()">copy text</button>
+                    <textarea id="text-printed" cols="15" rows="10" disabled></textarea>
+                    <div class="copied invisible">
+                        <p>Copiado</p>
+                    </div>
+                    <button type="button" class="btn-default" onclick="copyText()">copy text</button>
                 </div>
                 
 
